@@ -4,7 +4,13 @@ Aplicativo React Native que gera aleatoriamente palavras de tecnologias da TI, c
 
 > **Projeto Educacional** - Desenvolvido para a disciplina de Programação para Dispositivos Móveis
 
-## 📱 Demonstração
+## � Baixar APK
+
+**[⬇️ Download APK (Android)](https://expo.dev/accounts/lyankaleu/projects/gerador-tech/builds/15727bc3-48b3-4e52-b2d0-7a9b0c116e64)**
+
+Instale o APK no seu celular Android e teste o app sem precisar do Expo Go!
+
+## �📱 Demonstração
 
 - **Tela Inicial**: Gera palavras aleatórias de tecnologias
 - **Histórico**: Visualiza as últimas palavras geradas
