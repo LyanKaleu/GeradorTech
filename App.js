@@ -1,20 +1,28 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
+import { NavigationContainer } from '@react-navigation/native';
+import { AppProvider } from './context/AppContext';
+import { AppNavigator } from './navigation/AppNavigator';
 
+/**
+ * Componente raiz do aplicativo
+ * Configura os providers e a navegação principal
+ * 
+ * Estrutura do app:
+ * - SafeAreaProvider: Gerencia áreas seguras (notch, barra de status)
+ * - AppProvider: Fornece estado global (favoritos, histórico, palavra atual)
+ * - NavigationContainer: Gerencia navegação entre telas
+ * - AppNavigator: Define as rotas do app (Home e Favoritos)
+ */
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaProvider>
+      <AppProvider>
+        <NavigationContainer>
+          <SafeAreaView style={{ flex: 1 }}>
+            <AppNavigator />
+          </SafeAreaView>
+        </NavigationContainer>
+      </AppProvider>
+    </SafeAreaProvider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
